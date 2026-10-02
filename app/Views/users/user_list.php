@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>User Accounts</title>
+    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
 </head>
 <body>
 
@@ -10,11 +11,6 @@
     <?php if (session('message')): ?>
         <p><?= session('message') ?></p>
     <?php endif; ?>
-
-    <p>
-        <a href="<?= site_url('customers') ?>">Customers</a> |
-        <a href="<?= site_url('users/new') ?>">Add New User</a>
-    </p>
 
     <table border="1" cellpadding="8">
         <tr>
@@ -56,6 +52,12 @@
             </tr>
         <?php endforeach; ?>
     </table>
+
+        <div class="button-group">
+        <a href="<?= site_url('customers') ?>">Customers</a>
+        <a href="<?= site_url('users/new') ?>">Add New User</a>
+        <a href="<?= site_url('logout') ?>">Logout</a>
+        </div>
 
 </body>
 </html>

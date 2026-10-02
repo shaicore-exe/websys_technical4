@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Edit User</title>
+    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
 </head>
 <body>
 
@@ -45,7 +46,7 @@
             <input
                 type="file"
                 name="avatar"
-                accept=".jpg,.jpeg,.png"
+                accept="image/png, image/jpeg"
             >
         </p>
 

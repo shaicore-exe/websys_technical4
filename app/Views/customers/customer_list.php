@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Customer Accounts</title>
+    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
 </head>
 <body>
 
@@ -10,10 +11,6 @@
     <?php if (session('message')): ?>
         <p><?= session('message') ?></p>
     <?php endif; ?>
-
-    <p>
-        <a href="<?= site_url('customers/new') ?>">Add New Customer</a>
-    </p>
 
     <table border="1" cellpadding="8">
         <tr>
@@ -36,6 +33,11 @@
             </tr>
         <?php endforeach; ?>
     </table>
-
+    
+     <div class="button-group">
+        <a href="<?= site_url('users') ?>">Users</a>
+        <a href="<?= site_url('customers/new') ?>">Add New Customer</a>
+        <a href="<?= site_url('logout') ?>">Logout</a>
+    </div>
 </body>
 </html>
